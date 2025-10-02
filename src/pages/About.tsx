@@ -45,8 +45,6 @@ const About: React.FC = () => {
  continuous improvement, embracing the latest
  advancements to provide superior products and
  services."
-        founderName="Mr. Harit Shah"
-        foundedYear={1993}
       />
       <Process />
       <Counter />

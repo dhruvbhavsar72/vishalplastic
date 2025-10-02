@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import type { ProductDetail } from '../../type';
 import prodDetail from '../../db.json';
 
