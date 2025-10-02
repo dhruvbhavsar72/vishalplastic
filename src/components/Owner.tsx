@@ -6,8 +6,6 @@ interface AboutSectionProps {
     title: string;
     subtitle: string;
     description: string;
-    founderName: string;
-    foundedYear: number;
 }
 
 const Owner: React.FC<AboutSectionProps> = ({
@@ -15,8 +13,6 @@ const Owner: React.FC<AboutSectionProps> = ({
     title,
     subtitle,
     description,
-    founderName,
-    foundedYear
 }) => {
     return (
         <section className="about-section">

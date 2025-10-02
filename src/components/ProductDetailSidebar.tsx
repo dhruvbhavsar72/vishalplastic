@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import ProductSearchbar from './ProductSearchbar';
 import ProductRange from './ProductRange';
 
