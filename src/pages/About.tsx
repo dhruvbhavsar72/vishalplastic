@@ -17,8 +17,7 @@ const About: React.FC = () => {
         title="Business Solutions"
         subtitle="We Strive to Offer Intelligent"
         description=" Established in 1993, Vishal Plastic Industries has over
- 27 years of experience in manufacturing high-quality
- pharma plastic products and plastic oil spouts. With
+ 27 years of experience in manufacturing high-quality pharma plastic products and plastic oil spouts. With
  decades of expertise, we specialize in providing durable,
  reliable, and innovative plastic solutions tailored to
  meet the needs of the pharmaceutical and oil industries.
