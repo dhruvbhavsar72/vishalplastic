@@ -34,11 +34,11 @@ const Banner = () => {
                   <div className="banner">
                     <div className="container">
                       <div className="banner-content">
-                        <h1>
+                        <h1 className="xl:!text-[60px] test-white !leading-[1.2] sm:!text-5xl !text-4xl">
                           {slide.heading} <br />
                           <span className="highlight">{slide.highlight}</span>
                         </h1>
-                        <div className="mt-4 flex items-center gap-9">
+                        <div className="mt-4 flex sm:flex-row flex-col sm:items-center items-start gap-9">
                           <Button productId={''} />
                           <a href="#" className="btn-view !no-underline">View All Products</a>
                         </div>

@@ -107,7 +107,6 @@ h6 {
 
 h1 {
   font-family: "Outfit", sans-serif;
-  font-size: 60px;
   font-weight: 600;
 }
 
@@ -786,6 +785,14 @@ ul.feature-list {
   color: #CC3232;
 }
 
+.news-slider .slick-slide {
+  height: auto !important;
+}
+
+.news-slider .slick-slide>div {
+  height: 100%;
+}
+
 .news-card {
   overflow: hidden;
   transition: all 0.3s ease-in-out;
@@ -804,10 +811,6 @@ ul.feature-list {
   border-radius: 12px 12px 0 0;
   height: 230px;
   object-fit: cover;
-}
-
-.news-card-body {
-  padding: 20px;
 }
 
 .news-date {
@@ -896,6 +899,13 @@ ul.feature-list {
   height: 55px;
 }
 
+textarea.form-control {
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background: #F4F4F4;
+  height: auto;
+}
+
 .footer-sub-form {
   max-width: 540px;
   margin-left: auto;
@@ -981,7 +991,6 @@ ul.feature-list {
 }
 
 .footer-top {
-  margin-bottom: 5rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
@@ -993,15 +1002,6 @@ ul.feature-list {
   font-weight: 500;
   line-height: 25px;
   margin-bottom: 40px;
-}
-
-.banner-content h1 {
-  color: #FFF;
-  font-family: Outfit;
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 75px;
 }
 
 .banner-content h1 .highlight {
@@ -1044,12 +1044,11 @@ ul.feature-list {
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  height: 100vh;
+  height: calc(100dvh - 60px);
   display: flex;
   align-items: center;
   color: #fff;
-  padding: 5rem 0;
-  min-height: 650px;
+  padding: 30px 0
 }
 
 .banner-section:before {
@@ -1550,9 +1549,6 @@ ul.feature-list {
 }
 
 @media(max-width:1024px) {
-  h1 {
-    font-size: 50px
-  }
 
   h2 {
     font-size: 38px
@@ -1564,9 +1560,6 @@ ul.feature-list {
 }
 
 @media(max-width:767px) {
-  h1 {
-    font-size: 40px
-  }
 
   h2 {
     font-size: 34px
@@ -1574,10 +1567,6 @@ ul.feature-list {
 
   .news-card {
     padding: 20px;
-  }
-
-  .news-card-body {
-    padding: 20px 0 0;
   }
 
   .tab-pane {

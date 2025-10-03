@@ -5,6 +5,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import ContactForm from './ContactForm'
 
 library.add(fas, far, fab)
 
@@ -13,7 +14,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container ">
 
-        <div className="footer-top">
+        <div className="footer-top mb-5">
           <div className="row">
             <div className="col-md-6">
               <div className="">
@@ -39,8 +40,6 @@ const Footer = () => {
 
           <div className="col-lg-3 col-md-6 text-center text-md-start mb-4">
             <img src="img/logo.png" alt="Logo" className="mb-3" />
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard.</p>
             <div className="social-icons mt-3">
               <a href="#">
                 <FontAwesomeIcon icon={['fas', 'dog']} size="xs" />
@@ -86,31 +85,10 @@ const Footer = () => {
           </div>
 
 
-          <div className="col-lg-4 col-md-6 footer-right-form footer-details-title">
-            <h5>Contact Us</h5>
-            <form>
-              <div className="form-field">
-                <label>First Name</label>
-                <input type="text" className="form-control" placeholder="First Name" />
-              </div>
-              <div className="form-field">
-                <label>First Name</label>
-                <input type="text" className="form-control" placeholder="First Name" />
-              </div>
-              <div className="form-field">
-                <label>First Name</label>
-                <input type="text" className="form-control" placeholder="First Name" />
-              </div>
-              <div className="form-field">
-                <label>First Name</label>
-                <input type="text" className="form-control" placeholder="First Name" />
-              </div>
-              <input type="submit" value="Submit Now" className="btn submit-btn" />
-            </form>
-          </div>
+          <ContactForm />
         </div>
 
-        <div className="footer-bt d-flex justify-content-between mt-5">
+        <div className="footer-bt flex justify-between sm:flex-row flex-col gap-2">
           <p>Copyright © 2025 Evolvision</p>
           <div className='flex items-center gap-4'>
             <a href="#" className="text-white">Terms of Use</a>

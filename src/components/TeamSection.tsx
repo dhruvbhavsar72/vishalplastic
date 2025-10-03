@@ -3,6 +3,7 @@
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useEffect, useState } from 'react';
 
 const teamMembers = [
   { img: "img/client-img.png", name: "Jonathan Barnes", role: "Founder and CEO" },
@@ -17,24 +18,43 @@ const teamMembers = [
 ];
 
 const TeamSection = () => {
+  const [hasMounted, setHasMounted] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    setHasMounted(true);
+    setWindowWidth(window.innerWidth);
+    
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  if (!hasMounted) return null;
+
+  const getSlidesToShow = () => {
+    if (windowWidth <= 768) return 1;
+    if (windowWidth <= 992) return 2;
+    return 3;
+  };
+
+  const getSlidesToScroll = () => {
+    if (windowWidth <= 768) return 1;
+    if (windowWidth <= 992) return 2;
+    return 3;
+  };
+
   const settings = {
     dots: true,
     arrows: false,
     infinite: true,
     speed: 600,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: getSlidesToShow(),
+    slidesToScroll: getSlidesToScroll(),
     autoplay: true,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: { slidesToShow: 2 }
-      },
-      {
-        breakpoint: 576,
-        settings: { slidesToShow: 1 }
-      }
-    ]
   };
 
   return (
