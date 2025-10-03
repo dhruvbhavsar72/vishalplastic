@@ -103,11 +103,4 @@ const NewsSection = () => {
 };
 
 export default NewsSection;
-function getSlidesToShow() {
-  throw new Error('Function not implemented.');
-}
-
-function getSlidesToScroll() {
-  throw new Error('Function not implemented.');
-}
 
