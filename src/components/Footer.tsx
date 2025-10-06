@@ -6,6 +6,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import ContactForm from './ContactForm'
+import NewsLetter from './NewsLetter'
 
 library.add(fas, far, fab)
 
@@ -14,27 +15,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container ">
 
-        <div className="footer-top mb-5">
-          <div className="row">
-            <div className="col-md-6">
-              <div className="">
-                <h3>Download Vishal Plast Company Brochure</h3>
-              </div>
-            </div>
-
-
-            <div className="col-md-6">
-              <div className="row ">
-                <div className="footer-sub-form">
-                  <div className="input-group">
-                    <input type="email" className="form-control" placeholder="Enter Email Address" />
-                    <input type="submit" value="Submit Now" className="btn submit-btn" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <NewsLetter />
 
         <div className="row">
 
