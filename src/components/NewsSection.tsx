@@ -9,15 +9,15 @@ const newsData = [
     id: 1,
     title: 'Green packaging: A huge responsibility',
     date: 'Jun 2, 2022',
-    image: 'img/blog.jpg',
+    image: 'img/blog1.jpg',
     content: "Packaging – one of the crucial aspects of the pharma industry – has been witnessing changes over years. With time, the demand for innovative packaging has risen, including innovative designs, security features, track and trace features, and so on and so forth. Currently, there are a number of sustainable packaging methods like metal tins, paper board packaging, HDPE and PP recyclable bottles that are being used in pharma companies.",
-    link: '#'
+    link: 'https://www.expresspharma.in/green-packaging-a-huge-responsibility/'
   },
   {
     id: 2,
     title: 'Innovative Recyclable Blister Pack Reduces Carbon Footprint',
     date: 'June 16, 2025',
-    image: 'img/blog.jpg',
+    image: 'img/blog2.jpg',
     content: "Pharmaceutical plastic packaging is under increasing scrutiny as the industry looks for solutions that balance sustainability with functionality. Businesses are under increasing pressure to use environmentally friendly materials while also making sure that they meet the strict performance standards necessary for pharmaceutical protection.",
     link: 'https://plasticsindustry.org/articles/innovative-recyclable-blister-pack-reduces-carbon-footprint'
   },
@@ -25,7 +25,7 @@ const newsData = [
     id: 3,
     title: 'Govt exempts imported medical-grade plastic from quality rules to boost syringe, IV production',
     date: 'Jun 13, 2025',
-    image: 'img/blog.jpg',
+    image: 'img/blog3.webp',
     content: "The government has exempted pharmaceutical-grade high-density polyethylene (HDPE), a critical raw material used in making disposable syringes and IV cannulas, from mandatory quality certification under the Bureau of Indian Standards (BIS).",
     link: 'https://www.livemint.com/news/india/govt-exempts-imported-medical-grade-plastic-from-quality-rules-to-boost-syringe-iv-production-11749797486512.html'
   },

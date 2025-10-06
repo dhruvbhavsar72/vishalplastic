@@ -8,16 +8,16 @@ export const emailConfig = {
   publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'VhhoLAbN3ZgZkDBQ_',
   // Company information
   companyName: 'vishpa',
-  companyEmail: 'dhruv.bhavsar18@gmail.com'
+  companyEmail: 'dhruv_bhavsar18@yahoo.com'
 }
 
 // Template parameters interface
 export interface EmailTemplateParams extends Record<string, unknown> {
   from_name: string
   first_name: string
-  last_name: string
   from_email: string
   mobile: string
   message: string
   to_name: string
+  to_email?: string
 }

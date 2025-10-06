@@ -331,7 +331,7 @@
                 "productColor": "Transparent",
                 "productUse": "Used for accurate dosing of liquids",
                 "productMaterial": "PP",
-                "productImage": "accessory1.png"
+                "productImage": "img/applicator1.png"
             },
             {
                 "productName": "SPICE TIN CAP",
@@ -340,7 +340,7 @@
                 "productColor": "White",
                 "productUse": "Used for powders or liquids",
                 "productMaterial": "HDPE",
-                "productImage": "accessory2.png"
+                "productImage": "img/applicator2.png"
             },
             {
                 "productName": "WOMEN APPLICATOR ROUND TYPE",
@@ -349,7 +349,7 @@
                 "productColor": "Blue",
                 "productUse": "Used for transferring liquids into small containers",
                 "productMaterial": "LDPE",
-                "productImage": "accessory3.png"
+                "productImage": "img/applicator3.png"
             },
             {
                 "productName": "PLASTIC DROPPER",
@@ -358,7 +358,7 @@
                 "productColor": "Clear",
                 "productUse": "Used for syringe or dosing insert",
                 "productMaterial": "Silicone / PP",
-                "productImage": "accessory4.png"
+                "productImage": "img/applicator4.png"
             },
             {
                 "productName": "SILICA GEL CANISTER",
@@ -367,7 +367,7 @@
                 "productColor": "Green",
                 "productUse": "Ideal for liquid dosing",
                 "productMaterial": "Silicone / LDPE",
-                "productImage": "accessory5.png"
+                "productImage": "img/applicator5.png"
             },
             {
                 "productName": "EAR BUDS CONTAINER",
@@ -376,7 +376,7 @@
                 "productColor": "Pink",
                 "productUse": "Used for accurate oral medication dosing",
                 "productMaterial": "PP",
-                "productImage": "accessory6.png"
+                "productImage": "img/applicator6.png"
             }
         ]
     }

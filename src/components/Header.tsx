@@ -38,12 +38,12 @@ const Header: React.FC = () => {
                 <Link className="nav-link" to="/contact">Contact us</Link>
               </li> */}
               <li className="nav-i">
-                <button type="button" className="btn btn-gradient">
+                <a href='brochure.pdf' target='_blank' type="button" className="btn btn-gradient">
                   Download Brochure
-                </button>
+                </a>
               </li>
             </ul>
-            
+
 
             <button
               onClick={toggleMenu}

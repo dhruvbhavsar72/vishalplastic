@@ -5,7 +5,7 @@ import { toast, Toaster } from 'react-hot-toast';
 
 interface FormData {
     firstName: string
-    lastName: string
+    email: string
     mobile: string
     description: string
 }
@@ -13,7 +13,7 @@ interface FormData {
 const ContactForm = () => {
     const [formData, setFormData] = useState<FormData>({
         firstName: '',
-        lastName: '',
+        email: '',
         mobile: '',
         description: ''
     })
@@ -28,12 +28,13 @@ const ContactForm = () => {
     }
 
     const validateForm = (): boolean => {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
         if (!formData.firstName.trim()) {
             toast.error('First name is required')
             return false
         }
-        if (!formData.lastName.trim()) {
-            toast.error('Last name is required')
+        if (!emailPattern.test(formData.email.trim())) {
+            toast.error('Please enter a valid email address')
             return false
         }
         if (!formData.mobile.trim()) {
@@ -58,14 +59,15 @@ const ContactForm = () => {
 
         try {
             const templateParams: EmailTemplateParams = {
-                from_name: `${formData.firstName} ${formData.lastName}`,
+                from_name: `${formData.firstName}`,
                 first_name: formData.firstName,
-                last_name: formData.lastName,
+                to_email: formData.email,
                 from_email: emailConfig.companyEmail,
                 mobile: formData.mobile,
                 message: formData.description,
-                to_name: emailConfig.companyName
+                to_name: emailConfig.companyName,
             }
+            console.log('EmailJS template params', templateParams)
 
             await emailjs.send(
                 emailConfig.serviceId,
@@ -77,13 +79,14 @@ const ContactForm = () => {
             toast.success('Message sent successfully! We will get back to you soon.')
             setFormData({
                 firstName: '',
-                lastName: '',
+                email: '',
                 mobile: '',
                 description: ''
             })
-        } catch (error) {
+        } catch (error: any) {
+            const providerText = error?.text || 'Unknown error'
             console.error('Error sending email:', error)
-            toast.error('Failed to send message. Please try again later.');
+            toast.error(`Failed to send: ${providerText}`)
         } finally {
             setIsLoading(false)
         }
@@ -109,11 +112,11 @@ const ContactForm = () => {
                 <div className="form-field">
                     <label>Last Name *</label>
                     <input
-                        type="text"
-                        name="lastName"
+                        type="email"
+                        name="email"
                         className="form-control"
-                        placeholder="Last Name"
-                        value={formData.lastName}
+                        placeholder="Email"
+                        value={formData.email}
                         onChange={handleChange}
                         disabled={isLoading}
                     />
